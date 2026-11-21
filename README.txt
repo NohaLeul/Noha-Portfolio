@@ -5,7 +5,7 @@ CONTENTS
 - index.html
 - contracts.html
 - privacy-policy.html
-- agreement-submitted.html
+- agreement-submitted.html (informational page; not an automatic confirmation)
 - css/style.css
 - js/script.js
 - js/legal.js
@@ -15,40 +15,38 @@ CONTENTS
 PREVIEW LOCALLY
 1. Extract this ZIP file.
 2. Open the extracted Noha-Portfolio folder.
-3. Double-click index.html to preview the website in your browser.
-   (The contact form will only work after deploying to Netlify and enabling Forms.)
+3. Double-click index.html to preview the website.
 
-PUBLISH WITH NETLIFY
-1. Sign in to https://app.netlify.com/
-2. Open your Netlify dashboard.
-3. Choose Add new site / Deploy manually (the wording may vary).
-4. Drag the extracted Noha-Portfolio folder into the deployment area.
-   You can also upload the ZIP if the interface offers ZIP upload.
-5. After deployment, open the site's Forms section and make sure form detection is enabled.
-6. Submit a test message through the contact form and confirm it appears in Netlify Forms.
-7. In Netlify's form notification settings, add your email address if you want email alerts for new submissions.
+DEPLOY
+1. Sign in to your static hosting provider (for example, Netlify).
+2. Create or open a site and deploy the complete Noha-Portfolio folder.
+3. The project is static HTML, CSS, JavaScript, and image assets; it does not require Netlify Forms, a backend, or a database.
 
-CONTACT FORM NOTE
-The form is configured for Netlify Forms. It does not directly send mail from the visitor's browser to Gmail. Netlify receives the form submission; configure email notifications in Netlify if you want messages/alerts delivered to your inbox.
+CONTACT FORM
+- The contact form validates the visitor's name, email, and message.
+- It opens a Gmail compose page in a new tab addressed to nohaleul27@gmail.com.
+- The subject is "New Portfolio Inquiry".
+- The visitor's name, email, and message are prefilled.
+- The visitor must review the draft and press Send in Gmail. The portfolio does not send email automatically.
+- If a pop-up is blocked, the page displays a friendly message with the email address.
+
+CLIENT AGREEMENT FORM
+- The agreement form validates the required fields and prepares a Gmail draft with the entered agreement details.
+- The visitor must review and press Send in Gmail. The portfolio does not store or submit agreement data to a website server.
+- Download / Print PDF opens the browser print dialog. Choose "Save as PDF" as the print destination.
+- A typed name is not identity verification or a verified electronic signature. The form does not claim that an agreement is legally binding.
+- The agreement template is general information, not legal advice. Have the final terms reviewed by an appropriate local legal professional. If either party is under 18, involve a parent or legal guardian.
 
 CUSTOMIZE
-- Personal details, page text, links, and SEO metadata are in index.html.
+- Personal details, page text, links, and project details are in index.html.
 - Colors, spacing, and responsive layouts are in css/style.css.
-- Interactions and theme toggle are in js/script.js.
-- Replace images in assets/ if you want to update the logo or project screenshot.
+- Interactions and the theme toggle are in js/script.js and js/legal.js.
+- Agreement form and print behavior are in js/agreement.js.
+- Replace images in assets/ to update the project previews or branding.
 
-IMPORTANT
-- The website is ready for deployment, but it has not been published for you.
-- Check all contact links and submit a test form after deployment.
-- The Telegram link uses the supplied phone number as a Telegram contact link; if it does not open correctly for your account, replace it with your public Telegram username link.
-
-
-NEW LEGAL / CLIENT PAGES
-- contracts.html contains the website-project terms and client agreement form.
-- privacy-policy.html explains the current portfolio form, browser storage, and service-provider practices.
-- The agreement form is configured for Netlify Forms. After deploying, enable form detection in Netlify and submit a test agreement.
-- agreement-submitted.html is the form's confirmation destination. It should only be reached after Netlify accepts the form.
-- The Download / Print PDF control opens the browser print dialog. Choose "Save as PDF" in the print destination to save a PDF copy.
-- A typed name is not identity verification or a verified electronic signature. The contract page says so explicitly.
-- Review the agreement template with an appropriate local legal professional before using it. If either party is under 18, involve a parent or legal guardian.
-- The Privacy Policy reflects the code currently included. If you add analytics, tracking, new embeds, new form processors, or change hosting, update the policy and review the new data flows.
+PRIVACY NOTES
+- No analytics service or advertising tracker is included in the supplied code.
+- The theme preference is stored in browser local storage.
+- Google Fonts is loaded externally.
+- When a visitor chooses to send a prepared message, Gmail/Google processes the email under its own terms and privacy practices.
+- Update the Privacy Policy if you add analytics, tracking, embedded services, new form processors, or change data flows.

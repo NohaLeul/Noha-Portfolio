@@ -112,7 +112,8 @@
           <div class="project-info">
             <div class="project-topline"><span class="project-type">CROCHET BUSINESS WEBSITE</span><span class="project-number">PROJECT 002</span></div>
             <h3>Nina Crochet</h3>
-            <p>An elegant and visually engaging website for Nina Crochet, showcasing crochet products through a dedicated online shopping experience. Designed to present the brand and its products in an attractive, accessible way.</p>
+            <p>An elegant and visually engaging website for Nina Crochet, showcasing crochet products through a dedicated online shopping experience. Designed to present the brand and its products in an attractive and accessible way.</p>
+            <p class="project-role"><strong>My role:</strong> Website Designer and Developer.</p>
             <div class="tag-list"><span>Website design</span><span>Web development</span><span>Product selling</span><span>Responsive design</span></div>
             <div class="project-links"><a class="button button-primary" href="https://ninacrochet.netlify.app/" target="_blank" rel="noopener">Visit Website ↗</a></div>
           </div>
@@ -177,17 +178,16 @@
             </div>
             <div class="social-links"><a href="https://github.com/NohaLeul" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/noha-leul-7a4673451/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
           </div>
-          <form class="contact-form reveal" name="portfolio-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?success=true">
-            <input type="hidden" name="form-name" value="portfolio-contact">
-            <p class="hidden-field"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <form class="contact-form reveal" id="portfolioContactForm" name="portfolio-contact">
             <div class="form-heading"><span>PROJECT INQUIRY</span><b>Tell me about it.</b></div>
             <label for="name">Your name</label><input id="name" name="name" type="text" placeholder="How should I call you?" required>
             <label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required>
             <label for="business">Business name <span>(optional)</span></label><input id="business" name="business" type="text" placeholder="Your business or company">
             <label for="message">What do you have in mind?</label><textarea id="message" name="message" rows="4" placeholder="Tell me about your business and the website you need..." required></textarea>
-            <button class="button button-primary submit-button" type="submit">Send inquiry <span>↗</span></button>
-            <p class="form-note">This form is configured for Netlify Forms. After deployment, enable form detection in your Netlify site settings to receive submissions.</p>
-            <p class="form-success" id="formSuccess" role="status" hidden>Thanks for reaching out! Your message has been submitted.</p>
+            <button class="button button-primary submit-button" type="submit">Send Message <span>↗</span></button>
+            <p class="form-note">Your email app will open with your message prepared. Review it and press Send to deliver your inquiry.</p>
+            <p class="form-success" id="formSuccess" role="status" hidden>Your message is ready in Gmail. Please review it and press Send to deliver it.</p>
+            <p class="form-note" id="formOpenError" role="status" hidden>We couldn't open Gmail in a new tab. Please allow pop-ups for this site or email nohaleul27@gmail.com directly.</p>
           </form>
         </div>
       </div>

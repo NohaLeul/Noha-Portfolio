@@ -1,6 +1,33 @@
 (() => {
   const $ = (selector, root = document) => root.querySelector(selector);
   const root = document.documentElement;
+  const contactForm = $("#portfolioContactForm");
+  contactForm?.addEventListener("submit", event => {
+    event.preventDefault();
+    if (!contactForm.reportValidity()) return;
+    const visitorName = $("#name").value.trim();
+    const visitorEmail = $("#email").value.trim();
+    const visitorMessage = $("#message").value.trim();
+    const subject = "New Portfolio Inquiry";
+    const body = `Name: ${visitorName}\n\nEmail: ${visitorEmail}\n\nMessage:\n${visitorMessage}`;
+    const gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" +
+      encodeURIComponent("nohaleul27@gmail.com") +
+      "&su=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+    const opened = window.open(gmailUrl, "_blank");
+    const success = $("#formSuccess");
+    const error = $("#formOpenError");
+    if (opened) {
+      opened.opener = null;
+      if (success) success.hidden = false;
+      if (error) error.hidden = true;
+      contactForm.reset();
+    } else {
+      if (error) error.hidden = false;
+      if (success) success.hidden = true;
+    }
+  });
+
   const themeButton = $("#themeToggle");
   const savedTheme = localStorage.getItem("noha-portfolio-theme");
   if (savedTheme === "dark") root.dataset.theme = "dark";
@@ -82,9 +109,4 @@
   document.addEventListener("keydown", event => { if (event.key === "Escape") closeModal(); });
 
   $("#year").textContent = new Date().getFullYear();
-  if (new URLSearchParams(window.location.search).get("success") === "true") {
-    const success = $("#formSuccess");
-    success.hidden = false;
-    success.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
 })();
