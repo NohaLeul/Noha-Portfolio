@@ -50,3 +50,22 @@ PRIVACY NOTES
 - Google Fonts is loaded externally.
 - When a visitor chooses to send a prepared message, Gmail/Google processes the email under its own terms and privacy practices.
 - Update the Privacy Policy if you add analytics, tracking, embedded services, new form processors, or change data flows.
+
+Full Website Ownership Transfer and Developer Access Termination
+
+Upon receiving the full agreed purchase payment, the Developer agrees to transfer ownership and administrative control of the completed website to the Client.
+
+The transfer includes the website's source code, project files, agreed design assets, hosting project, domain management (where applicable), and other agreed deliverables.
+
+After the successful handover:
+
+1. The Client becomes responsible for managing, maintaining, hosting, and updating the website.
+2. The Developer will relinquish administrative access to the transferred website, hosting account, repository, and other transferred services.
+3. The Developer will not access, modify, monitor, or manage the website without the Client's explicit permission.
+4. The Developer will not retain access to the Client's private business information, customer information, website submissions, or confidential credentials.
+5. The Client is responsible for future hosting fees, domain renewals, maintenance, and other third-party service costs.
+6. Any future assistance requested from the Developer will require a separate agreement.
+
+The Developer may retain only those non-confidential portfolio materials that the Client has explicitly permitted the Developer to display.
+
+The ownership transfer will be considered complete once the Client has received the agreed deliverables, confirmed access to the transferred accounts, and accepted the handover.
